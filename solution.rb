@@ -1,12 +1,10 @@
 require 'sinatra'
 
 get "/" do
-@saludo = "Hola Desconocido"
-erb :index
+"Hola Desconocido!"
 end
 
 
 get '/:nombre' do
-@saludo_nombre = "Hello #{params['nombre']}!"
-erb :saludo
+  "Hola #{params['nombre'].capitalize}!"
 end
